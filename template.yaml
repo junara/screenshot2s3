@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: XXXXXXXXXXX
+Resources:
+  Screenshot2S3Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      Policies:
+        - S3CrudPolicy:
+            BucketName: XXXXXXXXXXX
+      FunctionName: screenshot2s3
+      CodeUri: src
+      Handler: index.handler
+      MemorySize: 1600
+      Runtime: nodejs8.10
+      Timeout: 30
+      Events:
+        Get:
+          Type: Api
+          Properties:
+            Path: /
+            Method: get
+      Layers:
+        - "arn:aws:lambda:ap-northeast-1:XXXXXXXX:layer:myPup:1"
