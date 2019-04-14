@@ -1,6 +1,9 @@
 # 概要
 * webのスクリーンショットを撮るためのlambda
 
+# 関連記事
+https://qiita.com/junara/items/5563ad7ee133ce736ed0
+
 ## S3バケットを用意する
 
 SAMでdeployするファイルをアップロードするバケットを用意します。
